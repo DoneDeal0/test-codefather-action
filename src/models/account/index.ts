@@ -1,3 +1,3 @@
 export type Account = {
-  id: number;
+  id: string;
 };
