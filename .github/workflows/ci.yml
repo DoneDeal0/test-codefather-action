@@ -1,25 +1,24 @@
 name: Codefather Validation
-
 on:
   pull_request:
     branches: [main]
-
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-
-      - name: Install dependencies
-        run: npm install
-
+      - name: Debug file structure
+        run: |
+          echo "Current directory: $PWD"
+          ls -R
+          cat action.yml
+          ls -la action/dist
+          node action/dist/index.js
       - name: Run Codefather
-        # later DoneDeal0/codefather@v1
         uses: DoneDeal0/codefather@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
