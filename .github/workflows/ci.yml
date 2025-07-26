@@ -19,6 +19,6 @@ jobs:
           ls -la action/dist
           node action/dist/index.js
       - name: Run Codefather
-        uses: DoneDeal0/codefather@main
+        uses: DoneDeal0/codefather-action@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
