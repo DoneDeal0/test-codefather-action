@@ -2,6 +2,11 @@ name: Codefather Validation
 on:
   pull_request:
     branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -11,14 +16,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: Debug file structure
-        run: |
-          echo "Current directory: $PWD"
-          ls -R
-          cat action.yml
-          ls -la action/dist
-          node action/dist/index.js
-      - name: Run Codefather
-        uses: DoneDeal0/codefather-action@main
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install local CLI package
+        run: npm install ./codefather-1.0.0.tgz
+
+      - name: Run CLI
+        run: npx codefather-github
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
