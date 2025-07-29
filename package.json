@@ -2,6 +2,9 @@
   "name": "test-cf",
   "version": "0.1.0",
   "private": true,
+  "bin": {
+  "codefather-github": "./dist/scripts/github/index.js"
+},
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
