@@ -1,1 +1,0 @@
-var r=(o=>(o.Success="success",o.MultiSuccess="multi-success",o.Error="error",o.MultiErrors="multi-errors",o.Warning="warning",o.NoChanges="no-changes",o.NotFound="not-found",o.NoGitConfig="no-gitconfig",o))(r||{}),i={success:"\x1B[32m",error:"\x1B[31m",warning:"\x1B[33m",info:"\x1B[37m"};export{r as a,i as b};
