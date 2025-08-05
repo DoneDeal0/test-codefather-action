@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "codefather": "node dist/index.cjs",
-    "codefather-init": "node dist/scripts/init/index.cjs"
+    "codefather": "codefather"
   },
   "dependencies": {
     "next": "15.4.2",
@@ -16,6 +15,7 @@
     "react-dom": "19.1.0"
   },
   "devDependencies": {
+    "@donedeal0/codefather": "^1.0.0",
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",

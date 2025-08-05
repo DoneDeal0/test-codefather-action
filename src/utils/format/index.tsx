@@ -1,3 +1,3 @@
 export function useFormat() {
-  return "format!";
+  return "formt!";
 }
