@@ -15,7 +15,7 @@
     "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "@donedeal0/codefather": "^1.0.0",
+    "@donedeal0/codefather": "^1.0.3",
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",

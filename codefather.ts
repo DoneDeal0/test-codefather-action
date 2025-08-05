@@ -1,26 +1,14 @@
-import type { CodefatherConfig } from "@donedeal0/codefather";
-
 export default {
-  caporegimes: [
-    { name: "solozzo", emailPrefix: "solozzo" },
-    { name: "@lucabrasi", emailPrefix: "luca.brasi" },
-  ],
+  caporegimes: [{ name: "AntonSchwartz0" }],
   rules: [
     {
       match: ["src/utils/**"],
-      goodfellas: [
-        { name: "solozzo", emailPrefix: "solozzo-the-turk" },
-        { name: "@tomhagen", emailPrefix: "tom.hagen" },
-      ],
-      crews: ["clemenzaPeople"],
+      goodfellas: [{ name: "AntonSchwartz0" }],
       allowForgiveness: false,
     },
     {
       match: ["src/models/**"],
-      goodfellas: [
-        { name: "mike", emailPrefix: "michael.corleone" },
-        { name: "sonny", emailPrefix: "sonny" },
-      ],
+      goodfellas: [{ name: "DoneDeal0" }],
       allowForgiveness: true,
       message: "Custom message to tell you to NOT TOUCH THE README!",
     },
@@ -33,7 +21,4 @@ export default {
     autoAssignGoodfellas: true,
     autoAssignCaporegimes: true,
   },
-  crews: {
-    clemenzaPeople: [{ name: "@paulieGatto" }, { name: "@lucabrasi" }],
-  },
-} satisfies CodefatherConfig;
+};
