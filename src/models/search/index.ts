@@ -1,3 +1,3 @@
 export type Search = {
-  id: number;
+  id: boolean;
 };
